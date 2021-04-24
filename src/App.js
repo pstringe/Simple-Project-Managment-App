@@ -5,6 +5,8 @@ import { createMuiTheme, ThemeProvider, useTheme} from '@material-ui/core/styles
 import Header from './Components/Layout/Header';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Dashboard from './Components/Dashboard/Dashboard';
+import ProjectDetails from './Components/Project/ProjectDetails';
+import ProjectSummary from './Components/Project/ProjectSummary';
 
 const theme = createMuiTheme({
     palette: {
@@ -36,13 +38,14 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const routes = [
-  {name: 'root', path: '/', component: null, auth: true},
-  {name: 'dashboard', path: '/dashboard', component: <Dashboard/>, auth: true},
-  {name: 'new project', path: '/newproject', component: null, auth: true},
-  {name: 'Logout', path: '/logout', component: null, auth: true},
-  {name: 'Profile', path: '/profile', component: null, auth: true},
-  {name: 'Login', path: '/login', component: null, auth: false},
-  {name: 'Signup', path: '/signup', component: null, auth: false},
+  {name: 'root', path: '/', component: null, auth: true, show:false},
+  {name: 'dashboard', path: '/dashboard', component: Dashboard, auth: true, show:true},
+  {name: 'new project', path: '/newproject', component: null, auth: true, show:true},
+  {name: 'project details', path: '/project/:id', component: ProjectDetails, auth: true, show:false},
+  {name: 'Logout', path: '/logout', component: null, auth: true, show:true},
+  {name: 'Profile', path: '/profile', component: null, auth: true, show:true},
+  {name: 'Login', path: '/login', component: null, auth: false, show:true},
+  {name: 'Signup', path: '/signup', component: null, auth: false, show:true},
 ];
 
 function App() {

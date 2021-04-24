@@ -13,7 +13,7 @@ const Navbar = ({items}) => {
     const auth = true;
     
     const links = items.filter((item) => {
-        return item.auth === auth && item.name !== 'root';
+        return item.auth === auth && item.show;
     });
 
     return ( 
