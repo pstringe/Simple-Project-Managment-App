@@ -19,7 +19,9 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const classes = useStyles();
 
-    const submit = () => {
+    const submit = (e) => {
+        e.preventDefault();
+
         console.log('submit clicked email:',email);
     }
 
@@ -31,7 +33,7 @@ const Login = () => {
                     <Grid container direction='column'>
                         <Input className={classes.input} variant='filled' value={email} label='email' onChange={(e)=>{setEmail(e.target.value)}}/>
                         <Input className={classes.input} variant='filled' value={password} label='password' onChange={(e)=>{setPassword(e.target.value)}}/>
-                        <Button className={classes.input} variant='contained' onClick={submit}>Login</Button>
+                        <Button className={classes.input} variant='contained' onClick={(e) => submit(e)}>Login</Button>
                     </Grid>
                 </form>
             </Card>

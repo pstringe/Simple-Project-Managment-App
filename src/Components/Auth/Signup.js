@@ -21,7 +21,9 @@ const Signup = () => {
     const [lastName, setLastName] = useState('');
     const classes = useStyles();
 
-    const submit = () => {
+    const submit = (e) => {
+        e.preventDefault();
+
         console.log('submit clicked email:',email);
     }
 
@@ -35,7 +37,7 @@ const Signup = () => {
                         <TextField className={classes.input} variant='filled' value={password} label='Password' onChange={(e)=>{setPassword(e.target.value)}}/>
                         <TextField className={classes.input} variant='filled' value={firstName} label='First Name' onChange={(e)=>{setFirstName(e.target.value)}}/>
                         <TextField className={classes.input} variant='filled' value={lastName} label='Last Name' onChange={(e)=>{setLastName(e.target.value)}}/>
-                        <Button className={classes.input} variant='contained' onClick={submit}>Sign Up</Button>
+                        <Button className={classes.input} variant='contained' onClick={(e) => submit(e)}>Sign Up</Button>
                     </Grid>
                 </form>
             </Card>
