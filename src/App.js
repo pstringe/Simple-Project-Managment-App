@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
 
 const routes = [
   {name: 'root', path: '/', component: null, auth: true, show:false},
-  {name: 'dashboard', path: '/dashboard', component: Dashboard, auth: true, show:true},
+  {name: 'dashboard', path: '/dashboard', component: <Dashboard/>, auth: true, show:true},
   {name: 'new project', path: '/newproject', component: <CreateProject/>, auth: true, show:true},
   {name: 'project details', path: '/project/:id', component: ProjectDetails, auth: true, show:false},
   {name: 'Logout', path: '/logout', component: null, auth: true, show:true},
