@@ -7,6 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Dashboard from './Components/Dashboard/Dashboard';
 import ProjectDetails from './Components/Project/ProjectDetails';
 import ProjectSummary from './Components/Project/ProjectSummary';
+import Login from './Components/Auth/Login';
 
 const theme = createMuiTheme({
     palette: {
@@ -16,10 +17,6 @@ const theme = createMuiTheme({
       },
       secondary: {
         main: '#f48fb1',
-      },
-      background: {
-        default: '#212121',
-        paper: '#424242',
       },
     }
   }
@@ -44,7 +41,7 @@ const routes = [
   {name: 'project details', path: '/project/:id', component: ProjectDetails, auth: true, show:false},
   {name: 'Logout', path: '/logout', component: null, auth: true, show:true},
   {name: 'Profile', path: '/profile', component: null, auth: true, show:true},
-  {name: 'Login', path: '/login', component: null, auth: false, show:true},
+  {name: 'Login', path: '/login', component: <Login/>, auth: false, show:true},
   {name: 'Signup', path: '/signup', component: null, auth: false, show:true},
 ];
 
@@ -53,7 +50,6 @@ function App() {
   return (
     <ThemeProvider theme={theme} >
       <CssBaseline />
-
       <Container  className={`App ${classes.root}`} maxWidth='xl' >
         <Router>
           <Header className={classes.header} title='Simple Projects' items={routes}/>
