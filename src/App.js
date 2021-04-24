@@ -4,6 +4,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import { createMuiTheme, ThemeProvider, useTheme} from '@material-ui/core/styles';
 import Header from './Components/Layout/Header';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 const theme = createMuiTheme({
     palette: {
@@ -36,7 +37,7 @@ const useStyles = makeStyles(theme => ({
 
 const routes = [
   {name: 'root', path: '/', component: null, auth: true},
-  {name: 'dashboard', path: '/dashboard', component: null, auth: true},
+  {name: 'dashboard', path: '/dashboard', component: <Dashboard/>, auth: true},
   {name: 'new project', path: '/newproject', component: null, auth: true},
   {name: 'Logout', path: '/logout', component: null, auth: true},
   {name: 'Profile', path: '/profile', component: null, auth: true},

@@ -10,7 +10,7 @@ const useStyles = makeStyles({
 
 const Navbar = ({items}) => {
     const classes = useStyles();
-    const auth = false;
+    const auth = true;
     
     const links = items.filter((item) => {
         return item.auth === auth && item.name !== 'root';
