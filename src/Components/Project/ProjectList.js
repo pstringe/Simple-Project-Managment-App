@@ -1,11 +1,11 @@
 import { Typography, Card, Grid } from "@material-ui/core"
 import ProjectSummary from './ProjectSummary';
-const ProjectList = (props) => {
+const ProjectList = ({projects}) => {
     return ( 
         <Grid container direction='column' spacing={2}>
-            <ProjectSummary />
-            <ProjectSummary />
-            <ProjectSummary />
+            {projects.map((project) => {
+                return (<ProjectSummary project={project}/>);
+            })}
         </Grid> 
     );
 }

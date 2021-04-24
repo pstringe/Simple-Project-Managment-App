@@ -1,11 +1,11 @@
 import { Typography, Card, Grid } from "@material-ui/core";
 
-const ProjectSummary = () => {
+const ProjectSummary = ({project}) => {
     return (
         <Grid item> 
             <Card>
-                <Typography variant='h2'>Project Title</Typography>
-                <Typography variant='body2'>Author</Typography>
+                <Typography variant='h2'>{project.title}</Typography>
+                <Typography variant='body2'>{project.author}</Typography>
                 <Typography variant='body2'>Date</Typography>
             </Card> 
         </Grid>

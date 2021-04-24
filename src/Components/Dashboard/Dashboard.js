@@ -9,7 +9,7 @@ const Dashboard = (props) => {
     return (
         <Grid container>
             <Grid item xs={12} md={8}>
-                <ProjectList />
+                <ProjectList projects={projects}/>
             </Grid>
             <Grid item xs={12} md={4}>
                 <Notifications/>
