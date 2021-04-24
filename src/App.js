@@ -8,7 +8,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import ProjectDetails from './Components/Project/ProjectDetails';
 import ProjectSummary from './Components/Project/ProjectSummary';
 import Login from './Components/Auth/Login';
-
+import Signup from './Components/Auth/Signup';
 const theme = createMuiTheme({
     palette: {
       type: 'dark',
@@ -42,7 +42,7 @@ const routes = [
   {name: 'Logout', path: '/logout', component: null, auth: true, show:true},
   {name: 'Profile', path: '/profile', component: null, auth: true, show:true},
   {name: 'Login', path: '/login', component: <Login/>, auth: false, show:true},
-  {name: 'Signup', path: '/signup', component: null, auth: false, show:true},
+  {name: 'Signup', path: '/signup', component: <Signup/>, auth: false, show:true},
 ];
 
 function App() {

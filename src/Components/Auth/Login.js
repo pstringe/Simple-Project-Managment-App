@@ -29,8 +29,8 @@ const Login = () => {
                 <form>
                     <Typography className={classes.heading} variant='h5'>Login</Typography>
                     <Grid container direction='column'>
-                        <Input className={classes.input} variant='filled' value={email} lable='email' onChange={(e)=>{setEmail(e.target.value)}}/>
-                        <Input className={classes.input} variant='filled' value={password} lable='password' onChange={(e)=>{setPassword(e.target.value)}}/>
+                        <Input className={classes.input} variant='filled' value={email} label='email' onChange={(e)=>{setEmail(e.target.value)}}/>
+                        <Input className={classes.input} variant='filled' value={password} label='password' onChange={(e)=>{setPassword(e.target.value)}}/>
                         <Button className={classes.input} variant='contained' onClick={submit}>Login</Button>
                     </Grid>
                 </form>
